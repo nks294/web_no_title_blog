@@ -1,0 +1,1110 @@
+
+/* *********/
+/* 공통부분 */
+/* ******* */
+
+/* 기본 서식 삭제 */
+h1, h2, h3, h4, h5, h6, ul, li, a, p {
+    margin: 0;
+    padding: 0;
+    color: unset;
+    text-decoration-line: none;
+    list-style-type: none;
+    font-weight: normal;
+    line-height: normal;
+}
+
+/* 웹 폰트 적용 */
+* {
+    font-family:"Nanum Gothic", sans-serif;
+}
+
+/* body 부분 영역 설정 */
+body {
+    height: fit-content;
+    margin: 0 auto;
+}
+
+/* 스크롤바 너비 지정 */
+body::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* 스크롤바 색상 설정 */
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(121, 121, 121);
+}
+
+/* 스크롤바 모서리 둥글게 처리 */
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ******** */
+/* 헤더 부분 */
+/* ******** */
+
+/* 헤더 전체 영역 크기 지정 */
+header {
+    width: 100%;
+    height: 210px;
+    margin-bottom: 30px;
+}
+
+/* 헤더 최상단, 로고&타이틀 및 검색 영역 */
+#top-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+/* 로고 박스 크기 및 위치 지정 */
+#logo-box {
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+}
+
+/* 로고 크기 및 서식 지정 */
+#logo-box i {
+    align-items: center;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+/* 블로그 타이틀 서식 지정 */
+#logo-box h1 {
+    align-items: center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+/* 타이틀에 마우스를 올려놓을 시 점프하는 애니메이션 설정 */
+#logo-box:hover {
+    transform-origin: center center;
+    animation: jump 0.6s forwards cubic-bezier(0, 1.08, 1, 1);
+}
+
+/* 검색박스 크기, 여백 및 배열 설정 */
+#search-bar {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    margin-right: 50px;
+}
+
+/* 검색 아이콘 서식 및 여백 설정 */
+#search-bar i {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* 검색 입력란 디자인 변경 */
+#search-bar input {
+    font-size: 1em;
+    border: none;
+    width: 250px;
+    height: 30px;
+}
+
+/* 검색창 클릭시 자동으로 나오는 테두리 삭제 */
+#search-bar input:focus {
+    outline: none;
+}
+
+/* 검색창 플레이스홀더 폰트 변경 */
+#search-bar input::placeholder {
+    font-family:"Nanum Gothic", sans-serif;
+}
+
+/* 검색창, 로그인 버튼 영역 배열방식 변경 */
+#top-head-side {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+/* 로그인 버튼 크기 및 테두리 설정 */
+#login {
+    margin-right: 100px;
+}
+
+/* 로그인 a 태그를 flex로 만들고 그 안의 아이템들을 가운데 정렬 */
+#login button {
+    display: flex;
+    align-items: center;
+    padding: 7px 12px 7px 12px;
+    border-radius: 50px;
+    border: 2px solid #000000a8;
+    background: white;
+    color: black;
+    font-size: 16px;
+    transition: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    font-family:"Nanum Gothic", sans-serif;
+}
+
+/* 로그인 버튼에 마우스를 올려놓을시 색깔이 바뀌는 애니메이션 적용 */
+#login button:hover {
+    color: white;
+    background: black;
+}
+
+/* 로그인 버튼의 아이콘 위치 조정 */
+#login i {
+    margin-right: 8px;
+}
+
+/* 로그인 글씨 굵게 설정 */
+#login p {
+    font-weight: bold;
+}
+
+/* 모바일 전용 메뉴 PC에서는 숨기기 */
+#mobile-menu, #menu {
+    display: none;
+}
+
+/* 인삿말 박스 여백 지정 */
+#title-box {
+    margin-left: 100px;
+}
+
+/* 큰 텍스트 줄간격 조절 */
+#title-box h1 {
+    line-height: 50px;
+    font-weight: bold;
+}
+
+/* 작은 텍스트 줄간격 조절 */
+#title-box h4 {
+    margin-top: 4px;
+    line-height: 30px;
+}
+
+
+/* ********* */
+/* 네비게이션 */
+/* ********* */
+
+/* 메뉴 목록 높이 및 배열 설정 */
+nav { 
+    height: 50px;
+    margin-left: 100px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+/* 목록 높이 지정 */
+nav ul {
+    height: 50px;
+}
+
+/* 메뉴 항목별 여백과 크기, 배열 방식 지정 */
+nav li {
+    display: inline-block;
+    position: relative;
+    margin-right: 40px;
+    line-height: 30px;
+    text-align: center;
+    width: max-content;
+}
+
+/* 가상 클래스로 밑줄 그어지는 애니메이션의 시작 위치 지정 */
+nav li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #000;
+    transition: all .5s cubic-bezier(0, 0, 0.15, 1.01);
+}
+
+/* 마우스를 올리면 만들어뒀던 가상 클래스의 박스 길이가 늘어나면서 애니메이션 적용 */
+nav li:hover:after {
+    width: 100%;
+}
+
+/* 상단메뉴 글씨 스타일 바꾸기 */
+nav a {
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+/* 메일 주소 안내 박스 디자인 및 배열 방식 변경 */
+#mail-adress {
+    display: flex;
+    height: 30px;
+    width: 230px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+    border-radius: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+/* 메일 주소 안내 박스 아이콘 크기 조정 */
+#mail-adress i {
+    font-size: 22px;
+}
+
+/* 아이콘에 마우스 올릴 시 흔들리는 애니메이션 적용 */
+#mail-adress i.fa-envelope:hover {
+    animation: vibration 0.6s forwards ease-out;
+}
+
+/* 메일 주소 텍스트 부분 여백과 크기 설정 */
+#mail-adress p {
+    padding-left: 7px;
+    margin-bottom: 2px;
+    font-size: 15px; 
+}
+
+/* 여행 사진 박스 크기 및 배열 방식 변경 */
+#imgbox {
+    height: 300px;
+    /* 티가 나지 않도록 투명한 검정 그라데이션을 깔아서 배경 사진이 살짝 어두워 보이도록 설정 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.31)), url(images/header-image.jpg);
+    /* 스크롤을 왔다갔다 해도 사진은 따라가지 않도록 설정 */
+    background-attachment: fixed;
+    background-position-x: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+/* 여행 사진 박스의 타이틀 꾸미기 */
+.imgtitle h3, h5 {
+    margin-left: 150px;
+    line-height: 40px;
+    color: white;
+}
+
+/* 각 타이틀별 글씨 크기 지정 */
+.imgtitle h3 { font-size: 2em; }
+.imgtitle h5 { font-size: 1.2em; }
+
+
+/* ******** */
+/* 메인 영역 */
+/* ******** */
+
+/* 전체적인 여백 설정과 글 목록 영역과 사이드 바 간의 간격 자동으로 배치되게 설정 */
+main {
+    height: max-content;
+    margin: 25px 60px 0 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* **************** */
+/* 섹션, 글목록 영역 */
+/* **************** */
+
+/* 섹션 여백 설정 */
+section {
+    width: 100%;
+    height: 100%;
+    margin-right: 40px;
+}
+
+/* 인기 글 목록 영역, 그리드 사용 */
+.recommand-post {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 30px;
+    row-gap: 30px;
+    place-items: center;
+    margin: 25px 0 50px 0;
+}
+
+/* 인기글 항목별 너비 지정 및 가운데 정렬 */
+.grid-item {
+    place-items: center;
+    width: 100%;
+    height: auto;
+}
+
+/* 인기글 썸네일 사진 크기 조정 및 가운데 정렬 */
+.rp-imgbox {
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+}
+
+/* 인기글 제목 부분 여백 지정 및 글씨 크기와 굵게 설정 */
+.rp-title {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* 인기글 하단 포스팅 날짜와 좋아요 개수 표시 영역 설정 */
+.rp-footer {
+    font-size: 0.8em;
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    color: #666;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* 섹션 제목 글씨 크기 조정 */
+.section-title {
+    margin-top: 15px;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+/* 전체 글 목록, 목록의 배열 방식 변경 및 디자인 */
+.post-list li {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.253);
+}
+
+/* 전체 글 목록, 마지막 목록은 구분선 지우기 */
+.post-list li:last-child {
+    border-bottom: none;
+}
+
+/* 전체글 목록 글 영역 너비 조정 */
+.post-titlebox {
+    width: 80%;
+}
+
+/* 전체 글 목록 텍스트 부분 자간 행간 조정 */
+.post-titlebox h3, h6 {
+    line-height: 20px;
+    letter-spacing: 0.05em;
+}
+
+/* 전체 글 목록 마우스 올리면 제목 굵어지기 */
+.post-titlebox:hover h3 {
+    font-weight: bold;
+}
+
+/* 전체 글 목록 제목과 내용 분리 */
+.post-titlebox h3 {
+    margin-bottom: 10px;
+}
+
+/* 전체 글 목록 썸네일 이미지 박스 */
+.post-imgbox {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* **************** */
+/* 사이드, 위젯 영역 */
+/* **************** */
+
+/* 위젯들의 크기 및 여백 지정 */
+.widget {
+    padding: 15px;
+    box-sizing: border-box;
+    width: 200px;
+    height: max-content;
+}
+
+/* 위젯 상단 제목 및 구분선 */
+.cate-title {
+    font-size: 1em;
+    font-variant: small-caps;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px double #000;
+}
+
+/* 카테고리 그룹별 여백 지정 */
+.category {
+    margin-bottom: 15px;
+}
+
+/* 마지막 그룹은 여백 지우기 */
+.category:last-child {
+    margin-bottom: 0;
+}
+
+/* 그룹 타이틀 스타일 지정 */
+.category li.cate-head {
+    font-size: 1em;
+    padding-left: 0;
+}
+
+/* 그룹 타이틀 앞에 아이콘 달기 */
+.category li.cate-head::before {
+    content: "＊";
+}
+
+/* 목록 여백 및 스타일 지정 */
+.category li {
+    padding-left: 13px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* 목록 새로운 글 알림 sup 스타일 */
+.category li sup {
+    margin-left: 1px;
+    color: rgb(21, 150, 236);
+}
+
+/* 목록 아이콘 */
+.category li::before {
+    content: "└ "
+}
+
+/* 최근글, 공지사항 부분 목록 스타일 지정 */
+ul.widget-postlist li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    /* 글씨가 정해진 공간 이상을 넘어가면 줄바꿈을 하지 않고 숨기되 뒤의 내용은 ... 표시 */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* 목록 아이콘 */
+ul.widget-postlist li::before {
+    content: "ㆍ";
+}
+
+/* 태그 목록 위젯 배치 방식 바꾸기 */
+ul.tag-list {
+    display: flex;
+    /* 아이템이 정해진 공간을 벗어나면 줄바꿈 */
+    flex-wrap: wrap;
+}
+
+/* 태그 목록의 글씨 크기와 여백 지정 */
+ul.tag-list li {
+    margin-right: 5px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* 태그 목록 구분을 위해 가상 클래스로 쉼표 표시 */
+ul.tag-list li::after {
+    content: ","
+}
+
+/* 목록의 마지막 부분에는 쉼표 숨기기 */
+ul.tag-list li:last-child:after {
+    content: ""
+}
+
+/* 방문자수 위젯, 전체 방문자수 글씨 스타일 지정 */
+.total-text {
+    font-weight: bold;
+}
+
+.total-num {
+    font-size: 25pt;
+    font-weight: bold;
+}
+
+/* 오늘, 어제 방문자수 부분 글씨 스타일 지정 */
+
+.counter-text {
+    font-size: 10pt;
+}
+
+.counter-num {
+    font-size: 10pt;
+    margin-left: 10px;
+}
+
+
+/* *********** */
+/* 하단(footer) */
+/* *********** */
+
+/* 하단 영역 크기 및 스타일 지정 */
+footer {
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #888;
+    color: #888;
+    font-size: 0.9em;
+    margin: 40px 0;
+}
+
+/* 저작권 안내 텍스트 영역 여백 */
+#copyright {
+    margin-top: 20px;
+}
+
+/* 저작권 안내 텍스트 줄 높이 설정 */
+#copyright p {
+    line-height: 20px;
+}
+
+/* SNS 링크 아이콘 박스 */
+#sns-box {
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* SNS 아이콘에 마우스를 올릴 시 흔들리는 애니메이션 적용 */
+#sns-box i.fa-brands:hover {
+    animation: vibration 0.6s forwards ease-out;
+}
+
+/* ********* */
+/* 애니메이션 */
+/* ********* */
+
+/* 흔들리는 애니메이션 */
+@keyframes vibration {
+    0% { 
+        transform :rotate(0deg);
+    }
+    25% { 
+        transform :rotate(-8deg);
+    }
+    50% { 
+        transform :rotate(8deg);
+    }
+    75% { 
+        transform :rotate(-8deg);
+    }
+    100% { 
+        transform :rotate(0deg);
+    }
+}
+
+/* 점프하는 애니메이션 */
+@keyframes jump {
+    0% { 
+        margin-bottom:0px;
+    }
+    50% { 
+        margin-bottom:15px;
+    }
+    100% { 
+        margin-bottom:0px;
+    }
+}
+
+
+/* ********* */
+/* 공용클래스 */
+/* ********* */
+
+/* 링크걸린 목록의 텍스트 색깔 파란색으로 */
+.hyper-blue > li {
+    color: rgb(48, 100, 196);
+}
+
+/* 마우스 올려놓으면 파란색 밑줄 */
+.hyper-blue > li:hover {
+    text-decoration-line: underline;
+    text-decoration-color: rgb(48, 100, 196);
+}
+
+/* 마우스 올려놓으면 밑줄 */
+.hyper-black > li:hover {
+    text-decoration-line: underline;
+}
+
+/* 세로 구분선 */
+.vertical-line {
+    height: 100%;
+    margin: 0 15px;
+    border-left: 1px solid #888;
+}
+
+/* 가로 구분선 */
+.border-line {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #888;
+}
+
+
+/* ************ */
+/* 모바일 페이지 */
+/* ************ */
+
+/* 미디어 쿼리로 뷰포트 너비가 1100px 이하부터 이 스타일 적용 */
+@media screen and (max-width:1100px) {
+
+    /* header가 fixed로 고정되었기 때문에 상단부분에 여백을 줘서 내용이 밀리지 않도록 하기 */
+    body {
+        padding-top: 70px;
+    }
+
+    /* 헤더부분 여백 지우기 */
+    header {
+        height: fit-content;
+        margin: 0;
+    }
+
+    /* 헤더 영역 디자인 변경하기 */
+    #top-head {
+        background-color: white;
+        /* 스크롤해도 위치 고정되도록 설정 */
+        position:fixed;
+        /* 위치 직접지정 */
+        top: 0;
+        left: 0;
+        /* 너비, 높이 지정 */
+        width: 100vw;
+        height: 70px;
+        margin: 0;
+    }
+
+    /* 헤더 아이콘, 제목 크기 변경 */
+    #top-head i, h2 {
+        font-size: 2em;
+    }
+
+    /* 로고 부분 여백 설정 */
+    #logo-box {
+        margin: 40px;
+    }
+
+    /* 모바일에서는 로고의 점프 애니메이션 미적용 */
+    #logo-box:hover {
+        animation: none;
+    }
+
+    /* 검색바, 로그인 버튼 숨기기 */
+    #login {
+        display: none;
+    }
+
+    /* 메뉴바 숨기기 */
+    nav {
+        display: none;
+    }
+
+    /* 모바일 메뉴 버튼 위치 및 여백 조정 */
+    #mobile-menu {
+        margin-right: 20px;
+        display: block;
+    }
+
+    /* 체크박스의 기능만 필요하기 때문에 기본 체크박스는 숨기기 */
+    input[id="icon"] {
+        display: none;
+    }
+
+    /* 체크박스의 디자인을 대체할 영역 생성 */
+    input[id="icon"] + label {
+        position: relative;
+        display: block;
+        width: 35px;
+        height: 25px;
+    }
+
+    /* 체크박스 안의 아이콘 모양 구현을 위한 span 태그 디자인 설정 */
+    input[id="icon"] + label > span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 3px;
+        border-radius: 30px;
+        background: #000;
+        transition: all 0.35s;
+        /* 앞으로 튀어나오게 설정 */
+        z-index: 2;
+    }
+
+    /* 각 span 태그를 햄버거 모양으로 보이도록 위치 조정 */
+    input[id="icon"] + label > span:nth-child(1) { top: 0px; }
+    input[id="icon"] + label > span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+    input[id="icon"] + label > span:nth-child(3) { bottom: 0px; }
+
+    /* 모바일 메뉴 버튼 아이콘 애니메이션 - 첫번째 선은 오른쪽으로 45도 회전 */
+    input[id="icon"]:checked + label > span:nth-child(1) {
+        top:50%;
+        transform: translateY(-50%) rotate(45deg);
+        background-color: #000;
+    }
+
+    /* 모바일 메뉴 버튼 아이콘 애니메이션 - 두번째 선은 투명해지면서 사라지기 */
+    input[id="icon"]:checked + label > span:nth-child(2) {
+        opacity: 0;
+    }
+
+    /* 모바일 메뉴 버튼 아이콘 애니메이션 - 세번째 선은 왼쪽으로 45도 회전 */
+    input[id="icon"]:checked + label > span:nth-child(3) {
+        bottom:50%;
+        transform: translateY(50%) rotate(-45deg);
+        background-color: #000;
+    }
+
+    /* 모바일 메뉴 영역 위치 및 크기 조정 */
+    #icon + label + #mobile-main {
+        position: fixed;
+        display: inline-block;
+        width: 300px;
+        height: 100%;
+        background: linear-gradient(to bottom, rgb(251, 251, 251), rgb(255, 255, 255));
+        top: 0;
+        right: -300px;
+        margin: 0;
+        padding: 0;
+        transition: all 0.35s;
+        /* 메뉴 아이콘이 가려지지 않도록 뒤로 보내기 */
+        z-index: 1;
+    }
+
+    /* 모바일 메뉴 오른쪽에서 튀어나오는 애니메이션 */
+    #icon:checked + label + #mobile-main {
+        /* 모바일 메뉴에 그림자 넣기 */
+        box-shadow: -3px 0px 15px 3px #33333370;
+        right: 0px;
+    }
+
+    /* 모바일 메뉴 헤더 영역 */
+    #mobile-header {
+        height: 220px;
+        width: 300px;
+        text-align: center;
+        font-size: 2em;
+        border-bottom: 1px solid #eee;
+    }
+
+    #mobile-header-title {
+        margin-top: 35px;
+    }
+
+    /* 모바일 메뉴의 헤더 제목부분 여백이랑 글씨 서식 변경 */
+    #mobile-header p {
+        margin-top: 15px;
+        height: fit-content;
+        font-weight: bold;
+    }
+
+    /* PC버전 검색박스 숨기기 */
+    #search-bar { display: none; }
+    
+    /* 모바일 전용 검색박스 크기, 여백 및 배열 설정 */
+    #mobile-search-bar {
+        display: flex;
+        margin-left: 25px;
+        margin-top: 16px;
+        margin-bottom: 25px;
+    }
+
+    /* 검색 입력란 디자인 변경 */
+    #mobile-search-bar input {
+        border: none;
+        background: transparent;
+        border-bottom: 2px solid #000;
+        padding-left: 10px;
+        font-size: 0.6em;
+        width: 205px;
+        height: 34px;
+    }
+
+    /* 검색창 클릭시 자동으로 나오는 테두리 삭제 */
+    #mobile-search-bar input:focus {
+        outline: none;
+    }
+
+    /* 검색창 플레이스홀더 폰트 변경 */
+    #mobile-search-bar input::placeholder {
+        font-family: "Nanum Gothic", sans-serif;
+    }
+
+    /* 모바일 메뉴 위젯 영역 전체 박스 영역 설정 */
+    #mobile-section {
+        height: 100%;
+        /* 내용이 많으면 스크롤해서 넘길 수 있게 변경 */
+        overflow: scroll;
+    }
+
+    /* 모바일 메뉴 위젯 영역 높이 설정 */
+    #mobile-article {
+        height: 1200px;
+    }
+
+    /* 모바일 메뉴 위젯 영역 스크롤바 삭제 */
+    #mobile-section::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    /* 위젯의 너비와 글씨 크기 변경 */
+    .widget {
+        width: 100%;
+        padding: 0;
+        font-size: 15px;
+    }
+    
+    /* 모바일에서는 목록의 여백 제거 */
+    .category li {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 위젯 ul 태그의 왼쪽 여백 지정 */
+    .widget ul {
+        padding-left: 30px;
+    }
+
+    /* 위젯 li 태그의 위쪽 여백 및 스타일 지정 */
+    .widget li {
+        margin: 0;
+        padding-top: 30px;
+        font-size: 15px !important;
+        font-weight: bold;
+    }
+
+    /* 모바일 영역 위젯 제목 서식 및 여백 지정 */
+    .cate-title {
+        margin: 0;
+        padding: 40px 0 0 30px;
+        font-weight: bold;
+        border: none;
+        color: black;
+    }
+
+    /* 전체글 보기 부분 서식 별도 지정 */
+    .cate-title > a { 
+        color: black !important; 
+        font-weight: bold; 
+        display: flex; 
+        align-items: center;
+    }
+    
+    /* 전체글 보기 부분 글 개수 표시 p태그 서식 지정 */
+    .cate-title p { margin-left: 4px; font-size: 0.85em; }
+
+    /* 모바일 위젯 목록 글씨 색상 변경 */
+    .widget a{ color: #888; }
+    /* 항목에 마우스 올릴 시 검정색으로 진해지도록 색 변경 */
+    .widget a:hover{ color: #000;}
+    /* PC버전의 스타일 삭제 */
+    .widget ul > li::before { content: none; }
+    /* 태그 목록의 구분 쉼표 색상 변경 */
+    .tag-list li::after { color: #888; }
+
+    /* 모바일용 메뉴 하단 영역 여백 및 디자인 설정 */
+    #mobile-footer {
+        position: fixed;
+        bottom: 0;
+        width: 300px;
+        height: 90px;
+        padding-top: 15px;
+        display: inline-block;
+        text-align: center;
+        font-size: 1em;
+        background-color: white;
+        border-top: 1px solid #eee;
+    }
+
+    /* 방문자 표시 영역의 상단 여백 지정 */
+    .counter {
+        margin-top: 10px;
+    }
+
+    /* 방문자 표시 영역의 표를 가운데 정렬 */
+    .counter table {
+        margin: 0 auto;
+    }
+
+    /* 방문자 표시 영역 글씨 서식 변경 */
+    .counter-text {
+        font-size: 10pt;
+        /* 오늘, 어제 부분만 왼쪽에 여백을 줌으로서 간격 조정 */
+        margin-left: 10px;
+    }
+
+    /* 전체 방문자수 표시 영역 글씨 서식 변경  */
+    .total-text {
+        font-size: 10pt;
+    }
+
+    /* 방문자수 숫자 표시 부분 서식 지정 */
+    .counter-num, .total-num {
+        font-size: 10pt;
+        margin: 0;
+    }
+
+    /* 모바일용 sns 아이콘 박스 */
+    #sns-box {
+        color: black;
+        font-size: 0.6em;
+        padding-top: 10px;
+    }
+
+    /* 세로 구분선 */
+    .vertical-line {
+        height: 100%;
+        margin: 0 20px !important;
+        border-left: 1px solid #000;
+    }
+    
+    /* PC의 버전의 타이틀 박스(블로그 인사) 숨기기 */
+    #title-box {
+        display: none;
+    }
+    
+    /* 여행 배경 이미지 위치 및 크기 변경 */
+    #imgbox {
+        height: 230px;
+        margin-bottom: 40px;
+        padding: 0;
+    }
+
+    /* 이달의 여행지 부분 글씨 가운데 정렬 */
+    .imgtitle h3, h5 {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 메인 영역 여백 설정  */
+    main {
+        display: block;
+        box-sizing: border-box;
+        margin: 0 50px;
+    }
+    
+    /* PC버전에 있던 섹션 영역 여백 삭제 */
+    section {
+        margin: 0;
+    }
+
+    /* 인기 글 목록 영역 */
+    .recommand-post {
+        margin: 0 auto;
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        column-gap: 50px;
+        /* 모바일일때 인기글 영역의 그리드 column을 3줄에서 2줄로 바꾸기 */
+        grid-template-columns: repeat(2,auto);
+        /* 컨텐츠가 늘어나도록 해서 이미지가 꽉 차보이도록 함 */
+        justify-items: stretch;
+        margin-bottom: 10px;
+    }
+
+    /* 인기글 목록 아이템의 중앙 정렬과 너비 설정 */
+    .grid-item {
+        place-items: center;
+        width: 100%;
+        height: fit-content;
+    }
+
+    /* 이미지 박스의 크기 변경 */
+    .rp-imgbox {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* 섹션 제목 숨기기 */
+    .section-title {
+        display: none;
+    }
+    
+    /* 사이드 바 숨기기 */
+    aside {
+        display: none;
+    }
+
+    /* 하단 숨기기 */
+    footer {
+        display: none;
+    }
+
+    /* 모바일용 가로 구분선 */
+    .border-line {
+        display: none;
+    }
+
+    /* 모바일 메뉴 목록의 밑줄 효과 삭제 */
+    .hyper-blue > li, .hyper-black > li{
+        text-decoration-line: none !important;
+    }
+}
+
+
+/* ************ */
+/* 로그인 페이지 */
+/* ************ */
+
+#login-main {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p.login-for-comment {
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+p.forgot {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+button.google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+button.login {
+    display: block;
+    width: 300px;
+    height: 50px;
+    color: white;
+    background-color: black;
+    border: 0;
+}
+
+input.login {
+    background-color: lightgrey;
+    width: 90%;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 12pt;
+}

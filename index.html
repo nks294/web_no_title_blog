@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이 블로그 - Blog</title>
+    <!-- 구글 웹폰트 나눔 고딕 가져오기 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- 외부 css 스타일 시트 적용 -->
+    <link rel="stylesheet" href="css/blog.css">
+    <!-- 파비콘 -->
+    <link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
+    <!-- fontawesome 아이콘 가져오기 -->
+    <script src="https://kit.fontawesome.com/d7e414b2e7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <!-- 헤더 최상단 영역 -->
+        <div id="top-head">
+            <!-- 로고와 블로그 이름 영역 -->
+            <a href="/my_blog/about" id="logo-box">
+                <i class="fa-solid fa-shield-cat"></i>
+                <h1>마이블로그</h1>
+            </a>
+            <!-- 검색박스와 로그인 버튼의 전체적인 오른쪽 정렬을 위해 영역 생성 -->
+            <div id="top-head-side">
+                <!-- 검색 박스 영역 -->
+                <div id="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" name="search" id="search" placeholder="검색">
+                </div>
+                <!-- 로그인 버튼 영역 --><!-- 
+                <div id="login">
+                    <a href="#">
+                    </a>
+                </div> -->
+                <div id="login">
+                    <button>
+                        <i class="fa-solid fa-user"></i>
+                        <p class="login-text">로그인</p>
+                    </button>
+                </div>
+                <!-- 미디어쿼리 모바일 메뉴 -->
+                <div id="mobile-menu">
+                    <!-- 모바일 메뉴 아이콘 -->
+                    <input type="checkbox" id="icon">
+                    <label for="icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <!-- 모바일 메인 영역 -->
+                    <div id="mobile-main">
+                        <!-- 모바일 메뉴 헤더 영역 -->
+                        <div id="mobile-header">
+                            <!-- 모바일검색 박스 영역 -->
+                            <div id="mobile-search-bar">
+                                <input type="search" name="search" id="search" placeholder="포스팅 검색">
+                            </div>
+                            <div id="mobile-header-title">
+                                <i class="fa-solid fa-shield-cat"></i>
+                                <p>마이블로그</p>
+                            </div>
+                        </div>
+                        <!-- 모바일 메뉴 기능 영역 전체박스 -->
+                        <div id="mobile-section">
+                            <!-- 모바일 메뉴 기능 영역 -->
+                            <div id="mobile-article">
+                                <!-- 모바일 메뉴 전용 위젯 -->
+                                <div class="widget">
+                                    <div class="cate-title"><a href="#">전체글<p>(10)</p></a></div>
+                                    <ul class="category">
+                                        <li><a href="">맛집 탐방<sup> new</sup></a></li>
+                                        <li><a href="">여행<sup> new</sup></a></li>
+                                        <li><a href="">리뷰<sup> new</sup></a></li>
+                                        <li><a href="">소식</a></li>
+                                    </ul>
+                                </div>
+                                <div class="widget">
+                                    <div class="cate-title">공지사항</div>
+                                    <ul class="widget-postlist  hyper-black">
+                                        <li><a href="#">마이블로그 사용법</a></li>
+                                        <li><a href="#">협찬 관련 문의사항</a></li>
+                                    </ul>
+                                </div>
+                                <div class="widget">
+                                    <div class="cate-title">태그</div>
+                                    <ul class="tag-list hyper-blue">
+                                        <li><a href="#">#맛집</a></li>
+                                        <li><a href="#">#자유여행</a></li>
+                                        <li><a href="#">#배낭여행</a></li>
+                                        <li><a href="#">#내돈내산</a></li>
+                                        <li><a href="#">#해외여행</a></li>
+                                        <li><a href="#">#국내여행</a></li>
+                                        <li><a href="#">#숨은맛집</a></li>
+                                        <li><a href="#">#화장품</a></li>
+                                        <li><a href="#">#공부</a></li>
+                                        <li><a href="#">#잡담</a></li>
+                                    </ul>
+                                </div> 
+                                <div class="widget">
+                                    <div class="cate-title">최근 글</div>
+                                    <ul class="widget-postlist hyper-black">
+                                        <li><a href="#">천안 봉명동 맛집 "미주식당" 후기</a></li>
+                                        <li><a href="#">일본 오키나와 여행을 다녀오고</a></li>
+                                    </ul>
+                                </div>
+                            </div>                   
+                        </div>
+                        <!-- 모바일 메뉴 하단 영역 -->
+                        <div id="mobile-footer">
+                            <!-- 모바일 메뉴 방문자수 영역 -->
+                            <div class="widget counter">
+                                <table>
+                                    <tr>
+                                        <td><p class="total-text">전체 :</p></td>
+                                        <td><p class="total-num">20320</p></td>
+                                        <td><p class="counter-text">오늘 :</p></td>
+                                        <td><p class="counter-num">12303</p></td>
+                                        <td><p class="counter-text">어제 :</p></td>
+                                        <td><p class="counter-num">21321</p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- 모바일 메뉴 SNS 박스 영역 -->
+                            <div id="sns-box">
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                                <div class="vertical-line"></div>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <div class="vertical-line"></div>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <div class="vertical-line"></div>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 헤더 타이틀 영역, 블로그 인사말 -->
+        <div id="title-box">
+            <h1>나의 작은 공간</h1>
+            <h4>맛과 멋을 찾아 자유롭게 여행하고 기록하는<br>나만의 일기장입니다.</h4>
+        </div>
+    </header>
+    <!-- 메뉴 네비게이션 영역 -->
+    <nav>
+        <!-- 메뉴 영역 -->
+        <ul id="big-cate">
+            <li><a href="/my_blog/about" target="_self">소개</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">맛집투어</a></li>
+            <li><a href="#">여행일기</a></li>
+            <li><a href="#">리뷰</a></li>
+        </ul>
+        <!-- 메일 주소 영역 -->
+        <div id="mail-adress">
+            <i class="fa-regular fa-envelope"></i>
+            <p>mail-adress@mymail.com</p>
+        </div>
+    </nav>
+    <!-- 여행 대표 배경 사진 영역 -->
+    <div id="imgbox">
+        <!-- 배경 사진 영역 텍스트 박스 -->
+        <div class ="imgtitle">
+            <h3>이달의 여행지: OOO</h3>
+            <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+        </div>
+    </div>
+    <!-- 메인 영역 -->
+    <main>
+        <!-- 글 목록 영역 -->
+        <section>
+            <!-- 인기글 표시 영역 -->
+            <div class="recommand-post">
+                <a href="#" class="grid-item">
+                    <img src="https://picsum.photos/300/250?random=11"></img>
+                    <h2 class="rp-title">Lorem ipsum dolor</h2>
+                    <div class="rp-footer">
+                        <div class="rp-when">2024-04-04</div>
+                        <div class="rp-like"><i class="fa-solid fa-heart"></i> 123</div>
+                    </div>
+                </a>
+                <a href="#" class="grid-item">
+                    <img src="https://picsum.photos/300/250?random=12"></img>
+                    <h2 class="rp-title">Lorem ipsum dolor</h2>
+                    <div class="rp-footer">
+                        <div class="rp-when">2024-04-04</div>
+                        <div class="rp-like"><i class="fa-solid fa-heart"></i> 123</div>
+                    </div>
+                </a>
+                <a href="#" class="grid-item">
+                    <img src="https://picsum.photos/300/250?random=13"></img>
+                    <h2 class="rp-title">Lorem ipsum dolor</h2>
+                    <div class="rp-footer">
+                        <div class="rp-when">2024-04-04</div>
+                        <div class="rp-like"><i class="fa-solid fa-heart"></i> 123</div>
+                    </div>
+                </a>
+                <a href="#" class="grid-item">
+                    <img src="https://picsum.photos/300/250?random=14"></img>
+                    <h2 class="rp-title">Lorem ipsum dolor</h2>
+                    <div class="rp-footer">
+                        <div class="rp-when">2024-04-04</div>
+                        <div class="rp-like"><i class="fa-solid fa-heart"></i> 123</div>
+                    </div>
+                </a>
+                <a href="#" class="grid-item">
+                    <img src="https://picsum.photos/300/250?random=15"></img>
+                    <h2 class="rp-title">Lorem ipsum dolor</h2>
+                    <div class="rp-footer">
+                        <div class="rp-when">2024-04-04</div>
+                        <div class="rp-like"><i class="fa-solid fa-heart"></i> 123</div>
+                    </div>
+                </a>
+                <a href="#" class="grid-item">
+                    <img src="https://picsum.photos/300/250?random=16"></img>
+                    <h2 class="rp-title">Lorem ipsum dolor</h2>
+                    <div class="rp-footer">
+                        <div class="rp-when">2024-04-04</div>
+                        <div class="rp-like"><i class="fa-solid fa-heart"></i> 123</div>
+                    </div>
+                </a>
+            </div>
+            <!-- 구분선 -->
+            <div class="border-line"></div>
+            <!-- 섹션별 제목 텍스트 -->
+            <div class="section-title">전체글 목록</div>
+            <!-- 전체 글 목록 영역 -->
+            <div class="post-list">
+                <ul>
+                    <li>
+                        <a class="post-titlebox" href="#">
+                            <h3>Lorem ipsum dolor sitamet consecteturadipisicing elit.</h3>
+                            <h6>Lorem ipsum dolor sit,amet consecteturadipisicing elit.Laboriosam corporisadipisci porro vel ipsum.Corporis, illo dignissimos!Perspiciatis impedit fuga aexcepturi atque sapiente.Ea delectus nemo remrepudiandae itaque.Loremipsum dolor sit, ametconsectetur adipisicingelit. Laboriosam corporisadipisci porro vel ipsum.Corporis, illo dignissimos!Perspiciatis impedit fuga aexcepturi atque sapiente.Ea delectus nemo remrepudiandae itaque.</h6>
+                        </a>
+                        <div class="post-imgbox" style="background-image: url(https://picsum.photos/150/150?random=1);"></div>
+                    </li>
+                    <li>
+                        <a class="post-titlebox" href="#">
+                            <h3>Lorem ipsum dolor sitamet consecteturadipisicing elit.</h3>
+                            <h6>Lorem ipsum dolor sit,amet consecteturadipisicing elit.Laboriosam corporisadipisci porro vel ipsum.Corporis, illo dignissimos!Perspiciatis impedit fuga aexcepturi atque sapiente.Ea delectus nemo remrepudiandae itaque.Loremipsum dolor sit, ametconsectetur adipisicingelit. Laboriosam corporisadipisci porro vel ipsum.Corporis, illo dignissimos!Perspiciatis impedit fuga aexcepturi atque sapiente.Ea delectus nemo remrepudiandae itaque.</h6>
+                        </a>
+                        <div class="post-imgbox" style="background-image: url(https://picsum.photos/150/150?random=2);"></div>
+                    </li>
+                    <li>
+                        <a class="post-titlebox" href="#">
+                            <h3>Lorem ipsum dolor sitamet consecteturadipisicing elit.</h3>
+                            <h6>Lorem ipsum dolor sit,amet consecteturadipisicing elit.Laboriosam corporisadipisci porro vel ipsum.Corporis, illo dignissimos!Perspiciatis impedit fuga aexcepturi atque sapiente.Ea delectus nemo remrepudiandae itaque.Loremipsum dolor sit, ametconsectetur adipisicingelit. Laboriosam corporisadipisci porro vel ipsum.Corporis, illo dignissimos!Perspiciatis impedit fuga aexcepturi atque sapiente.Ea delectus nemo remrepudiandae itaque.</h6>
+                        </a>
+                        <div class="post-imgbox" style="background-image: url(https://picsum.photos/150/150?random=3);"></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 오른쪽 사이드 메뉴 -->
+        <aside>
+            <!-- 카테고리 영역 -->
+            <div class="widget">
+                <div class="cate-title">CATEGORY</div>
+                <ul class="category">
+                    <li class="cate-head">맛집 투어</li>
+                    <li><a href="">서울</a></li>
+                    <li><a href="">부산</a></li>
+                    <li><a href="">대구</a></li>
+                    <li><a href="">인천</a></li>
+                    <li><a href="">천안<sup>new</sup></a></li>
+                </ul>
+                <ul class="category">
+                    <li class="cate-head">여행 일기</li>
+                    <li><a href="">국내</a></li>
+                    <li><a href="">해외<sup>new</sup></a></li>
+                </ul>
+                <ul class="category">
+                    <li class="cate-head">내돈내산 리뷰</li>
+                    <li><a href="">IT기기</a></li>
+                    <li><a href="">화장품<sup>new</sup></a></li>
+                    <li><a href="">기타</a></li>
+                </ul>
+            </div>
+            <!-- 위젯 영역 -->
+            <div class="widget">
+                <div class="cate-title">ANNOUNCEMENT</div>
+                <ul class="widget-postlist  hyper-black">
+                    <li><a href="#">마이블로그 사용법</a></li>
+                    <li><a href="#">협찬 관련 문의사항</a></li>
+                </ul>
+            </div>
+            <div class="widget">
+                <div class="cate-title">RECENT POSTS</div>
+                <ul class="widget-postlist hyper-black">
+                    <li><a href="#">천안 봉명동 맛집 "미주식당" 후기</a></li>
+                    <li><a href="#">일본 오키나와 여행을 다녀오고</a></li>
+                    <li><a href="#">끈적임 없는 썬크림 솔직리뷰</a></li>
+                    <li><a href="#">여행 마니아의 필수품 WD-EDA리뷰</a></li>
+                    <li><a href="#">싱가포르 여행 일기</a></li>
+                </ul>
+            </div>
+            <div class="widget">
+                <div class="cate-title">TAGS</div>
+                <ul class="tag-list hyper-blue">
+                    <li><a href="#">#맛집</a></li>
+                    <li><a href="#">#자유여행</a></li>
+                    <li><a href="#">#배낭여행</a></li>
+                    <li><a href="#">#내돈내산</a></li>
+                    <li><a href="#">#해외여행</a></li>
+                    <li><a href="#">#국내여행</a></li>
+                    <li><a href="#">#숨은맛집</a></li>
+                    <li><a href="#">#화장품</a></li>
+                    <li><a href="#">#공부</a></li>
+                    <li><a href="#">#잡담</a></li>
+                </ul>
+            </div>
+            <!-- 방문자수 카운터 영역 -->
+            <div class="widget counter">
+                <table>
+                    <tr>
+                        <td colspan="2"><p class="total-text">TOTAL
+                        </p></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><p class="total-num">20320</p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="counter-text">today</p></td>
+                        <td><p class="counter-num">12303</p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="counter-text">yesterday</p></td>
+                        <td><p class="counter-num">21321</p></td>
+                    </tr>
+                </table>
+            </div>
+        </aside>
+    </main>
+    <!-- 하단 영역 -->
+    <footer>
+        <div id="copyright">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>이 블로그는 연습용입니다.</p>
+    </div>
+        <!-- 하단 SNS 링크 아이콘 영역 -->
+        <div id="sns-box">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <div class="vertical-line"></div>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <div class="vertical-line"></div>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <div class="vertical-line"></div>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+    <!-- 외부 스크립트 불러오기 -->
+    <script type="text/javascript" src="js/script.js"></script>
+</html>
